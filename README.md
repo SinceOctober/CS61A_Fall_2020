@@ -2,12 +2,19 @@
 
 Let There Be Light
 
-A course about managing complexity
-  Mastering abstraction
-  Isolating and solving problems
-  Techniques for organizing complex programs
-An introduction to programming
-  Full understanding of Python fundamentals
-  Large projects to demonstrate how to manage complexity
-  How computers interpret programming languages
-Different types of languages: Python, Scheme, & SQL
+# Course Overview
+
+## A Course About Managing Complexity
+- **Mastering Abstraction**
+- **Isolating and Solving Problems**
+- **Techniques for Organizing Complex Programs**
+
+## An Introduction to Programming
+- **Full Understanding of Python Fundamentals**
+- **Large Projects to Demonstrate How to Manage Complexity**
+- **How Computers Interpret Programming Languages**
+
+## Different Types of Languages
+- **Python**
+- **Scheme**
+- **SQL**
