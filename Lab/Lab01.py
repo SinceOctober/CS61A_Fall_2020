@@ -10,9 +10,11 @@ def falling(n, k):
     >>> falling(4, 0)
     1
     """
-    "*** YOUR CODE HERE ***"
-
-
+    result = 1
+    for i in range(k):
+        result *= n
+        n -= 1
+    return result
 
 def sum_digits(y):
     """Sum all the digits of y.
