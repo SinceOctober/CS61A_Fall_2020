@@ -21,7 +21,6 @@ def skip_add(n):
     else:
         return n + skip_add(n - 2)
 
-
 def summation(n, term):
 
     """Return the sum of the first n terms in the sequence defined by term.
