@@ -18,7 +18,6 @@ def a_plus_abs_b(a, b):
         f = sub
     return f(a, b)
 
-
 def two_of_three(x, y, z):
     """Return a*a + b*b, where a and b are the two smallest members of the
     positive numbers x, y, and z.
@@ -37,8 +36,7 @@ def two_of_three(x, y, z):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]
     ['Expr', 'Return']
     """
-    return _____
-
+    return x*x + y*y + z*z - max(x, y, z)**2
 
 def largest_factor(n):
     """Return the largest factor of n that is smaller than n.
