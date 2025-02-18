@@ -2,6 +2,8 @@
 
 Let There Be Light
 
+This repo contains all labs, homeworks, and projects.
+
 # Course Overview
 
 ## A Course About Managing Complexity
