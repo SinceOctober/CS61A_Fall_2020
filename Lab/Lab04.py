@@ -1,7 +1,5 @@
 LAB_SOURCE_FILE = __file__
 
-
-
 this_file = __file__
 
 def skip_add(n):
@@ -43,8 +41,10 @@ def summation(n, term):
     True
     """
     assert n >= 1
-    "*** YOUR CODE HERE ***"
-
+    if n == 1:
+        return term(1)
+    else:
+        return term(n) + summation(n - 1, term)
 
 def paths(m, n):
     """Return the number of paths from one corner of an
