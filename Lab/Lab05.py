@@ -11,7 +11,7 @@ def couple(s, t):
     [['c', 's'], [6, '1']]
     """
     assert len(s) == len(t)
-    "*** YOUR CODE HERE ***"
+    return [[s[i], t[i]] for i in range(len(s))]
 
 
 from math import sqrt
