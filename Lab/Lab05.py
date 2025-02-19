@@ -251,7 +251,7 @@ def coords(fn, seq, lower, upper):
     [[-2, 4], [1, 1], [3, 9]]
     """
     "*** YOUR CODE HERE ***"
-    return ______
+    return [[x, fn(x)] for x in seq if fn(x) >= lower and fn(x) <= upper]
 
 
 def riffle(deck):
