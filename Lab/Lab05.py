@@ -300,8 +300,18 @@ def add_trees(t1, t2):
         5
       5
     """
-    "*** YOUR CODE HERE ***"
-
+    new_label = label(t1) + label(t2)
+    t1_branches, t2_branches = branches(t1), branches(t2)
+    length = max(len(t1_branches), len(t2_branches))
+    new_branches = []
+    for i in range(length):
+        if i < len(t1_branches) and i < len(t2_branches):
+            new_branches.append(add_trees(t1_branches[i], t2_branches[i]))
+        elif i < len(t1_branches):
+            new_branches.append(t1_branches[i])
+        else:
+            new_branches.append(t2_branches[i])
+    return tree(new_label, new_branches)
 
 def build_successors_table(tokens):
     """Return a dictionary: keys are words; values are lists of successors.
