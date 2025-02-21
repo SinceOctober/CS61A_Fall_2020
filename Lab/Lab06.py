@@ -20,6 +20,7 @@ def make_adder_inc(a):
     def adder(x):
         nonlocal count
         count += 1
+        
         return a + x + count
     return adder
 
