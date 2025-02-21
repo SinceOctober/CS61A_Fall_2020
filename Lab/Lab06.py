@@ -20,7 +20,7 @@ def make_adder_inc(a):
     def adder(x):
         nonlocal count
         count += 1
-        
+
         return a + x + count
     return adder
 
@@ -48,7 +48,7 @@ def make_fib():
     >>> check(this_file, 'make_fib', ['List'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    
 
 
 def insert_items(lst, entry, elem):
