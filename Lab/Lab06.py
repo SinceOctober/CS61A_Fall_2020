@@ -47,9 +47,9 @@ def make_fib():
     >>> # Do not use lists in your implementation
     >>> check(this_file, 'make_fib', ['List'])
     True
-    """
+    """ 
     current, next = 0, 1 
-    
+
     def fib():
         nonlocal current, next
         result = current
