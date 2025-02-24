@@ -24,6 +24,27 @@ def make_adder_inc(a):
         return a + x + count
     return adder
 
+def make_adder_inc_solution(a):
+    """
+    >>> adder1 = make_adder_inc(5)
+    >>> adder2 = make_adder_inc(6)
+    >>> adder1(2)
+    7
+    >>> adder1(2) # 5 + 2 + 1
+    8
+    >>> adder1(10) # 5 + 10 + 2
+    17
+    >>> [adder1(x) for x in [1, 2, 3]]
+    [9, 11, 13]
+    >>> adder2(5)
+    11
+    """
+    def adder(b):
+        nonlocal a
+        value = a + b
+        a = a + 1
+        return value
+    return adder
 
 def make_fib():
     """Returns a function that returns the next Fibonacci number
@@ -49,7 +70,6 @@ def make_fib():
     True
     """ 
     current, next = 0, 1 
-
     def fib():
         nonlocal current, next
         result = current
