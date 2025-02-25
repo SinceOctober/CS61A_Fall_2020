@@ -22,7 +22,7 @@ def num_eights(x):
     ...       ['Assign', 'AugAssign'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    
     if x == 0:
     	return 0
     else:
