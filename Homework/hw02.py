@@ -22,14 +22,13 @@ def num_eights(x):
     ...       ['Assign', 'AugAssign'])
     True
     """
-    
-    if x == 0:
-    	return 0
+
+    if x % 10 == 8:
+        return 1 + num_eights(x // 10)
+    elif x < 10:
+        return 0
     else:
-    	if x%10 == 8:
-    		return num_eights(x//10) + 1
-    	else:
-    		return num_eights(x//10)
+        return num_eights(x // 10)
     		
 
 def pingpong(n):
