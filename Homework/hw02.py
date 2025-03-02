@@ -22,7 +22,6 @@ def num_eights(x):
     ...       ['Assign', 'AugAssign'])
     True
     """
-
     if x % 10 == 8:
         return 1 + num_eights(x // 10)
     elif x < 10:
