@@ -61,15 +61,14 @@ def pingpong(n):
 	>>> check(HW_SOURCE_FILE, 'pingpong', ['Assign', 'AugAssign'])
 	True
 	"""
-	"*** YOUR CODE HERE ***"
 	def helper(index, ppn, dir):
 		if index == n:
 			return ppn
 		else:
-			if (index+1)%8 == 0 or num_eights(index+1) != 0:
-				return helper(index+1, ppn+dir, -dir)
+			if (index + 1) % 8 == 0 or num_eights(index + 1) != 0:
+				return helper(index+1, ppn + dir, -dir)
 			else:
-				return helper(index+1, ppn+dir, dir)
+				return helper(index+1, ppn + dir, dir)
 
 	return helper(1,1,1)
 
