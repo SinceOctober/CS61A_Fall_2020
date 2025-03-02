@@ -118,17 +118,18 @@ def missing_digits(n):
     >>> check(HW_SOURCE_FILE, 'missing_digits', ['While', 'For'])
     True
     """
-    "*** YOUR CODE HERE ***"
     if n < 10:
     	return 0
+          
     else:
-    	if n%10 == n//10%10:
-    		return missing_digits(n//10)
-    	else:
-    		return n%10 - n//10%10 - 1 + missing_digits(n//10)
+        last_digit = n % 10
+        rest = n // 10       
+        next_last_digit = rest % 10
+        if last_digit == next_last_digit:
+            return missing_digits(rest)
+        else:
+            return (last_digit - next_last_digit - 1) + missing_digits(rest)
 
-# print(missing_digits(2558))
-# print(missing_digits(1122))
 
 
 
