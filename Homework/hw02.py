@@ -120,7 +120,6 @@ def missing_digits(n):
     """
     if n < 10:
     	return 0
-          
     else:
         last_digit = n % 10
         rest = n // 10       
