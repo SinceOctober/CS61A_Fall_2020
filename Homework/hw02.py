@@ -31,60 +31,60 @@ def num_eights(x):
     		
 
 def pingpong(n):
-	"""Return the nth element of the ping-pong sequence.
-	>>> pingpong(8)
-	8
-	>>> pingpong(10)
-	6
-	>>> pingpong(15)
-	1
-	>>> pingpong(21)
-	-1
-	>>> pingpong(22)
-	-2
-	>>> pingpong(30)
-	-2
-	>>> pingpong(68)
-	0
-	>>> pingpong(69)
-	-1
-	>>> pingpong(80)
-	0
-	>>> pingpong(81)
-	1
-	>>> pingpong(82)
-	0
-	>>> pingpong(100)
-	-6
-	>>> from construct_check import check
-	>>> # ban assignment statements
-	>>> check(HW_SOURCE_FILE, 'pingpong', ['Assign', 'AugAssign'])
-	True
-	"""
-	def helper(index, ppn, dir):
-		if index == n:
-			return ppn
-		else:
-			if (index + 1) % 8 == 0 or num_eights(index + 1) != 0:
-				return helper(index+1, ppn + dir, -dir)
-			else:
-				return helper(index+1, ppn + dir, dir)
+    """Return the nth element of the ping-pong sequence.
+    >>> pingpong(8)
+    8
+    >>> pingpong(10)
+    6
+    >>> pingpong(15)
+    1
+    >>> pingpong(21)
+    -1
+    >>> pingpong(22)
+    -2
+    >>> pingpong(30)
+    -2
+    >>> pingpong(68)
+    0
+    >>> pingpong(69)
+    -1
+    >>> pingpong(80)
+    0
+    >>> pingpong(81)
+    1
+    >>> pingpong(82)
+    0
+    >>> pingpong(100)
+    -6
+    >>> from construct_check import check
+    >>> # ban assignment statements
+    >>> check(HW_SOURCE_FILE, 'pingpong', ['Assign', 'AugAssign'])
+    True
+    """
+    def helper(index, ppn, dir):
+        if index == n:
+            return ppn
+        else:
+            if (index + 1) % 8 == 0 or num_eights(index + 1) != 0:
+                return helper(index+1, ppn + dir, -dir)
+            else:
+                return helper(index+1, ppn + dir, dir)
 
-	return helper(1,1,1)
+    return helper(1,1,1)
 
 
 
-	# index, ppn, dir = 1, 1, 1
-	# while index != n:
-	# 	if index%8 == 0 or num_eights(index)!=0:
-	# 		dir = -dir
-	# 		ppn += dir
-	# 	else:
-	# 		ppn += dir
-	# 	index += 1
+    # index, ppn, dir = 1, 1, 1
+    # while index != n:
+    #     if index%8 == 0 or num_eights(index)!=0:
+    #         dir = -dir
+    #         ppn += dir
+    #     else:
+    #         ppn += dir
+    #     index += 1
 
-	# return ppn
-			
+    # return ppn
+            
 
 # print(pingpong(22))
 # print(pingpong(15))
@@ -119,7 +119,7 @@ def missing_digits(n):
     True
     """
     if n < 10:
-    	return 0
+        return 0
     else:
         last_digit = n % 10
         rest = n // 10       
@@ -169,12 +169,12 @@ def count_coins(total):
     """
     "*** YOUR CODE HERE ***"
     def helper(n, m):
-    	if n == 0:
-    		return 1
-    	elif n < 0 or m == None:
-    		return 0
-    	else:
-    		return helper(n-m,m) + helper(n,next_largest_coin(m))
+        if n == 0:
+            return 1
+        elif n < 0 or m == None:
+            return 0
+        else:
+            return helper(n-m,m) + helper(n,next_largest_coin(m))
 
     return helper(total, 1)
 
