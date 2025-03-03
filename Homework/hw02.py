@@ -149,6 +149,7 @@ def next_largest_coin(coin):
     elif coin == 10:
         return 25
 
+
 def count_coins(total):
     """Return the number of ways to make change for total using coins of value of 1, 5, 10, 25.
     >>> count_coins(15)
@@ -164,19 +165,19 @@ def count_coins(total):
     >>> check(HW_SOURCE_FILE, 'count_coins', ['While', 'For'])                                          
     True
     """
-    """(n,m) = (n-m,m) + (n,next_largest_coin(m);
-    初始条件：n < 0 无解
-    """
-    "*** YOUR CODE HERE ***"
-    def helper(n, m):
-        if n == 0:
+    def constrained_count(total, smallest_coin):
+        if total == 0:
             return 1
-        elif n < 0 or m == None:
+        if total < 0:
             return 0
-        else:
-            return helper(n-m,m) + helper(n,next_largest_coin(m))
+        if smallest_coin == None:
+            return 0
+        without_coin = constrained_count(total, next_largest_coin(smallest_coin))
+        with_coin = constrained_count(total - smallest_coin, smallest_coin)
+        return without_coin + with_coin
+    return constrained_count(total, 1)
 
-    return helper(total, 1)
+
 
 # print(count_coins(10))
 # print(count_coins(15))
