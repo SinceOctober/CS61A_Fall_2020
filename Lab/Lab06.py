@@ -1,4 +1,18 @@
 this_file = __file__
+#     >>> check(this_file, 'pingpong', ['Assign', 'AugAssign'])
+#     True
+#     """
+#     def helper(n, prev_digit):
+#         if n < 10:
+#             return 0
+#         else:
+#             last_digit = n % 10
+#             if last_digit - prev_digit > 1:  # if there is a missing digit
+#                 return (last_digit - prev_digit - 1) + helper(n // 10, last_digit)
+#             else:
+#                 return helper(n // 10, last_digit)
+#     return helper(n // 10, n % 10)
+#
 
 
 def make_adder_inc(a):
@@ -77,8 +91,6 @@ def make_fib():
         return result
     return fib
     
-
-
 def insert_items(lst, entry, elem):
     """
     >>> test_lst = [1, 5, 8, 5, 2, 3]
