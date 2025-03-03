@@ -129,9 +129,6 @@ def missing_digits(n):
         else:
             return (last_digit - next_last_digit - 1) + missing_digits(rest)
 
-
-
-
 def next_largest_coin(coin):
     """Return the next coin. 
     >>> next_largest_coin(1)
