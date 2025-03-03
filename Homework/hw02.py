@@ -174,8 +174,6 @@ def count_coins(total):
         return without_coin + with_coin
     return constrained_count(total, 1)
 
-
-
 # print(count_coins(10))
 # print(count_coins(15))
 # print(count_coins(20))
@@ -197,5 +195,7 @@ def make_anonymous_factorial():
     return (lambda f:lambda k:f(f,k))(lambda f,k:k if k ==1 else k * f(f,k-1))
 
 print(make_anonymous_factorial()(5))
-# print(make_anonymous_factorial()(6))
+
+# Alternate solution:
+    #   return (lambda f: f(f))(lambda f: lambda x: 1 if x == 0 else x * f(f)(x - 1))
 
