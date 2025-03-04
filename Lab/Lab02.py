@@ -17,8 +17,6 @@ def lambda_curry2(func):
     return lambda x: lambda y: func(x, y)
 
 
-
-
 def count_cond(condition):
     """Returns a function with one parameter N that counts all the numbers from
     1 to N that satisfy the two-argument predicate function Condition, where
@@ -121,4 +119,3 @@ def cycle(f1, f2, f3):
             return x
         return apply_cycle
     return inner_cycle
-
