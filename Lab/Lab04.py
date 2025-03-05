@@ -2,6 +2,7 @@ LAB_SOURCE_FILE = __file__
 
 this_file = __file__
 
+
 def skip_add(n):
     """ Takes a number n and returns n + n-2 + n-4 + n-6 + ... + 0.
 
