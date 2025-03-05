@@ -44,7 +44,9 @@ def free_bacon(score):
 
     # Trim pi to only (score + 1) digit(s)
     # BEGIN PROBLEM 2
-    pi //= 10 ** (100 - score)
+
+    pi //= 10 ** (100 - score)  # Remove the last (100 - score) digits
+
     # END PROBLEM 2
 
     return pi % 10 + 3
