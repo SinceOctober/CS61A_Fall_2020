@@ -12,7 +12,7 @@ def lambda_curry2(func):
     >>> mul_5(42)
     210
     >>> lambda_curry2(mod)(123)(10)
-    3
+    3 
     """
     return lambda x: lambda y: func(x, y)
 
