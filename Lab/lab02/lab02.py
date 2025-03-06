@@ -119,3 +119,7 @@ def cycle(f1, f2, f3):
             return x
         return apply_cycle
     return inner_cycle
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
