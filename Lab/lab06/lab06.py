@@ -14,7 +14,6 @@ this_file = __file__
 #     return helper(n // 10, n % 10)
 #
 
- 
 def make_adder_inc(a):
     """
     >>> adder1 = make_adder_inc(5)
