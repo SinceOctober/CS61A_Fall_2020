@@ -1,6 +1,5 @@
 HW_SOURCE_FILE=__file__
 
-from ucb import trace
 def num_eights(x):
     """Returns the number of times 8 appears as a digit of x.
 
