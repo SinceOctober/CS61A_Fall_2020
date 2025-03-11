@@ -1,6 +1,19 @@
 # In lecture 8
 
+def fact_iter(n):
+    total, k = 1, 1
+    while k <= n:
+        total, k = total * k, k + 1
+    return total
+
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fact(n-1)
+    
 def split(n):
+    """Split positive n into all but its last digit and its last digit."""
     return n // 10, n % 10
 
 def sum_digits(n):
