@@ -2,7 +2,7 @@
 
 Let There Be Light
 
-This repo contains all labs, homeworks, and projects.
+This repo will contain all labs, homeworks, and projects.
 Under construction now.
 
 # Course Overview
