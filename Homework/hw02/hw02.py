@@ -71,8 +71,6 @@ def pingpong(n):
 
     return helper(1,1,1)
 
-
-
     # index, ppn, dir = 1, 1, 1
     # while index != n:
     #     if index%8 == 0 or num_eights(index)!=0:
@@ -82,13 +80,11 @@ def pingpong(n):
     #         ppn += dir
     #     index += 1
 
-    # return ppn
-            
+    # return ppn      
 
 # print(pingpong(22))
 # print(pingpong(15))
 # print(pingpong(100))
-
 
 def missing_digits(n):
     """Given a number a that is in sorted, increasing order,
