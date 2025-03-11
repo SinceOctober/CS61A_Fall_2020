@@ -1,3 +1,31 @@
+# In lecture 8
+
+def split(n):
+    return n // 10, n % 10
+
+def sum_digits(n):
+    """Return the sum of the digits of positive integer n."""
+    if n < 10:
+        return n
+    else:
+        all_but_last, last = split(n)
+        return sum_digits(all_but_last) + last
+
+def sum_digits_iter(n):
+    digit_sum = 0
+    while n > 0:
+        # n, last = n // 10, n % 10
+        n, last = split(n)
+        digit_sum = digit_sum + last
+    return digit_sum
+
+def sum_digits_rec(n, digit_sum):
+    if n == 0:
+        return digit_sum
+    else:
+        n, last = split(n)
+        return sum_digits_rec(n, digit_sum + last)
+
 # Lists
 
 odds = [41, 43, 47, 49]
