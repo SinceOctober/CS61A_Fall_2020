@@ -43,7 +43,7 @@ def end(s):
 def planet(size):
     """Construct a planet of some size."""
     assert size > 0
-    "*** YOUR CODE HERE ***"
+    return ['planet', size]
 
 def size(w):
     """Select the size of a planet."""
