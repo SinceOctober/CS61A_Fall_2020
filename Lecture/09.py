@@ -50,6 +50,15 @@ def f_then_g(f, g, n):
 grow = lambda n: f_then_g(grow, print, n//10)
 shrink = lambda n: f_then_g(print, shrink, n//10)
 
+def grow(n):
+    if n // 10 != 0:
+        grow(n // 10)
+        print(n // 10)
+
+def shrink(n):
+    if n // 10 != 0:
+        print(n // 10)
+        shrink(n // 10)
 # Tree recursion
 
 def fib(n):
