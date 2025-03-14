@@ -48,7 +48,6 @@ def planet(size):
 def size(w):
     """Select the size of a planet."""
     assert is_planet(w), 'must call size on a planet'
-    "*** YOUR CODE HERE ***"
     return w[1]
 
 def is_planet(w):
@@ -105,7 +104,16 @@ def balanced(m):
     >>> check(HW_SOURCE_FILE, 'balanced', ['Index'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    def torque(arm):
+        return length(arm) * total_weight(end(arm))
+
+    left_arm = left(m)
+    right_arm = right(m)
+
+    left_balanced = is_planet(end(left_arm)) or balanced(end(left_arm))
+    right_balanced = is_planet(end(right_arm)) or balanced(end(right_arm))
+
+    return torque(left_arm) == torque(right_arm) and left_balanced and right_balanced
 
 def totals_tree(m):
     """Return a tree representing the mobile with its total weight at the root.
