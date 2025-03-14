@@ -144,7 +144,12 @@ def totals_tree(m):
     >>> check(HW_SOURCE_FILE, 'totals_tree', ['Index'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    if is_planet(m):
+        return tree(size(m))
+    else:
+        left_tree = totals_tree(end(left(m)))
+        right_tree = totals_tree(end(right(m)))
+        return tree(total_weight(m), [left_tree, right_tree])
 
 
 def replace_leaf(t, find_value, replace_value):
