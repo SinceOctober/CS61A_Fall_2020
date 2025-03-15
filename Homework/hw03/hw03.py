@@ -181,8 +181,13 @@ def replace_leaf(t, find_value, replace_value):
     >>> laerad == yggdrasil # Make sure original tree is unmodified
     True
     """
-    "*** YOUR CODE HERE ***"
-
+    if is_leaf(t):
+        if label(t) == find_value:
+            return tree(replace_value)
+        else:
+            return tree(label(t))
+    else:
+        return tree(label(t), [replace_leaf(b, find_value, replace_value) for b in branches(t)])
 
 def preorder(t):
     """Return a list of the entries in this tree in the order that they
