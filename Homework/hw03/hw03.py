@@ -149,7 +149,7 @@ def totals_tree(m):
     else:
         left_tree = totals_tree(end(left(m)))
         right_tree = totals_tree(end(right(m)))
-        return tree(total_weight(m), [left_tree, right_tree])
+        return tree(total_weight(m), [left_tree, right_tree]) 
 
 
 def replace_leaf(t, find_value, replace_value):
