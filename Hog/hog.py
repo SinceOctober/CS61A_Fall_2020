@@ -69,6 +69,8 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     # BEGIN PROBLEM 3
     if num_rolls == 0:
         return free_bacon(opponent_score)
+    else:
+        return roll_dice(num_rolls, dice)
     # END PROBLEM 3
 
 
