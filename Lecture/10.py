@@ -83,7 +83,7 @@ def sum_iter(n):
 print( sum_iter(10) )
 
 
-# recursively sum first n integers
+# Recursively sum first n integers
 def sum_rec(n):
     if( n == 0 ):
         return(0)
