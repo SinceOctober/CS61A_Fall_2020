@@ -200,6 +200,7 @@ def preorder(t):
     [2, 4, 6]
     """
     "*** YOUR CODE HERE ***"
+    
 
 
 def has_path(t, word):
