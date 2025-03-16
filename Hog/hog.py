@@ -92,7 +92,11 @@ def swine_align(player_score, opponent_score):
     False
     """
     # BEGIN PROBLEM 4a
-    "*** YOUR CODE HERE ***"
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    return gcd(player_score, opponent_score) >= 10
     # END PROBLEM 4a
 
 
