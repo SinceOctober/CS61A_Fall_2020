@@ -45,7 +45,8 @@ def free_bacon(score):
     # Trim pi to only (score + 1) digit(s)
     # BEGIN PROBLEM 2
 
-    pi //= 10 ** (100 - score)  # Remove the last (100 - score) digits
+    # Remove the last (100 - score) digits
+    pi //= 10 ** (100 - score)  
 
     # END PROBLEM 2
 
@@ -66,7 +67,8 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     assert opponent_score < 100, 'The game should be over.'
     # BEGIN PROBLEM 3
-    "*** YOUR CODE HERE ***"
+    if num_rolls == 0:
+        return free_bacon(opponent_score)
     # END PROBLEM 3
 
 
