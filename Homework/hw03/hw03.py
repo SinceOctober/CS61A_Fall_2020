@@ -199,8 +199,10 @@ def preorder(t):
     >>> preorder(tree(2, [tree(4, [tree(6)])]))
     [2, 4, 6]
     """
-    "*** YOUR CODE HERE ***"
-    
+    result = [label(t)]
+    for b in branches(t):
+        result.extend(preorder(b))
+    return result
 
 
 def has_path(t, word):
