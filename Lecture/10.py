@@ -128,3 +128,14 @@ def reverse_string(s):
     else:
         return reverse_string(s[1:]) + s[0]
 
+
+'I am string!'
+"I've got an apostrophe"
+'您好'
+"""The Zen of Python
+claims, Readability counts.
+Read more: import this."""
+
+'The Zen of Python\nclaims, Readability counts.\nRead more: import this.'
+
+reverse("ward") = "draw"
