@@ -92,7 +92,6 @@ def sum_rec(n):
     
 print( sum_rec(10) )
 
-
 # List comprehensions
 
 odds = [1, 3, 5, 7, 9]
