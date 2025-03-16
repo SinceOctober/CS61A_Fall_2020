@@ -138,4 +138,15 @@ Read more: import this."""
 
 'The Zen of Python\nclaims, Readability counts.\nRead more: import this.'
 
-reverse("ward") = "draw"
+# Reversing a List (recuisively)
+def reverse(s):
+    """Return a list that is the reverse of lst.
+
+    >>> reverse_list([1, 2, 3, 4])
+    [4, 3, 2, 1]
+    """
+    if len(s) == 1:
+        return s
+    else:
+        return reverse(s[1:]) + [s[0]]
+    
