@@ -294,7 +294,6 @@ def always_roll(n):
         return n
     return strategy
 
-
 def make_averaged(original_function, trials_count=1000):
     """Return a function that returns the average value of ORIGINAL_FUNCTION
     when called.
