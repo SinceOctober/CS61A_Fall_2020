@@ -412,10 +412,28 @@ def extra_turn_strategy(score, opponent_score, cutoff=8, num_rolls=6):
 def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
 
-    *** YOUR DESCRIPTION HERE ***
+    This strategy goes for a win by taking advantages of free bacon and extra turns.
+    It rolls 0 dice (free bacon) if doing so would win the game, trigger an extra turn,
+    or yield a high bonus (here, at least 8 points). Otherwise, it rolls 6 dice.
+    
+    The idea is to play conservatively when free bacon is advantageous and aggressively
+    otherwise.
     """
     # BEGIN PROBLEM 12
-    return 6  # Replace this statement
+    bacon = free_bacon(opponent_score)
+    potential_score = score + bacon
+
+    # If free bacon wins the game, roll 0 dice.
+    if potential_score >= GOAL_SCORE:
+        return 0
+    # If free bacon triggers an extra turn, roll 0 dice.
+    if extra_turn(potential_score, opponent_score):
+        return 0
+    # If free bacon yields a high bonus, roll 0 dice.
+    if bacon >= 8:
+        return 0
+    # Otherwise, roll 6 dice.
+    return 6
     # END PROBLEM 12
 
 ##########################
