@@ -234,7 +234,16 @@ def has_path(t, word):
     False
     """
     assert len(word) > 0, 'no path for empty word.'
-    "*** YOUR CODE HERE ***"
+    
+    if label(t) != word[0]:
+        return False
+    elif len(word) == 1:
+        return True
+    else:
+        for b in branches(t):
+            if has_path(b, word[1:]):
+                return True
+        return False
 
 
 def interval(a, b):
