@@ -276,7 +276,6 @@ def mul_interval(x, y):
     p4 = x[1] * y[1]
     return [min(p1, p2, p3, p4), max(p1, p2, p3, p4)]
 
-
 def sub_interval(x, y):
     """Return the interval that contains the difference between any value in x
     and any value in y."""
