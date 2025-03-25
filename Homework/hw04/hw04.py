@@ -177,7 +177,6 @@ def remainders_generator(m):
     """
     "*** YOUR CODE HERE ***"
 
-
 def naturals():
     """A generator function that yields the infinite sequence of natural
     numbers, starting at 1.
