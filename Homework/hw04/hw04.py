@@ -22,7 +22,6 @@ def make_bank(balance):
         "*** YOUR CODE HERE ***"
     return bank
 
-
 def make_withdraw(balance, password):
     """Return a password-protected withdraw function.
 
