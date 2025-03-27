@@ -19,7 +19,7 @@ def make_bank(balance):
     120
     """
     def bank(message, amount):
-        "*** YOUR CODE HERE ***"
+        
     return bank
 
 def make_withdraw(balance, password):
