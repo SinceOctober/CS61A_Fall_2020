@@ -19,7 +19,17 @@ def make_bank(balance):
     120
     """
     def bank(message, amount):
-        
+        nonlocal balance
+        if message == 'withdraw':
+            if amount > balance:
+                return 'Insufficient funds' 
+            balance -= amount
+            return balance
+        elif message == 'deposit':
+            balance += amount
+            return balance
+        else:
+            return 'Invalid message'
     return bank
 
 def make_withdraw(balance, password):
