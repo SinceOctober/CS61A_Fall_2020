@@ -60,8 +60,27 @@ def make_withdraw(balance, password):
     >>> type(w(10, 'l33t')) == str
     True
     """
-    "*** YOUR CODE HERE ***"
-
+    wrong_passwords = []
+    def withdraw(amount, attempt):
+        nonlocal balance
+        #nonlocal password
+        #nonlocal wrong_passwords
+        
+        if len(wrong_passwords) == 3:
+            return "Frozen account. Attempts: " + str(wrong_passwords)
+        if attempt != password:
+            wrong_passwords.append(attempt)
+            if len(wrong_passwords) == 3:
+                return f"Frozen account. Attempts: {wrong_passwords}"
+            return 'Incorrect password'
+            
+        if amount > balance:
+            return 'Insufficient funds'
+            
+        balance = balance - amount
+        return balance
+        
+    return withdraw
 
 def repeated(t, k):
     """Return the first value in iterator T that appears K times in a row. Iterate through the items such that
