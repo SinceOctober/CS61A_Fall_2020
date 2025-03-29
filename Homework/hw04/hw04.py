@@ -65,7 +65,6 @@ def make_withdraw(balance, password):
         nonlocal balance
         #nonlocal password
         #nonlocal wrong_passwords
-
         if len(wrong_passwords) == 3:
             return "Frozen account. Attempts: " + str(wrong_passwords)
         
