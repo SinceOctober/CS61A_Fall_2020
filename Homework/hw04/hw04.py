@@ -105,7 +105,7 @@ def repeated(t, k):
     assert k > 1
     count = 1
     prev = next(t)
-    
+
     for value in t:
         if value == prev:
             count += 1
@@ -138,7 +138,12 @@ def permutations(seq):
     >>> sorted(permutations("ab"))
     [['a', 'b'], ['b', 'a']]
     """
-    "*** YOUR CODE HERE ***"
+    if len(seq) == 0:
+        yield []
+    else:
+        for i in range(len(seq)):
+            for p in permutations(seq[:i] + seq[i+1:]):
+                yield [seq[i]] + p
 
 
 def make_joint(withdraw, old_pass, new_pass):
