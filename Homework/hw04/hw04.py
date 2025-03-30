@@ -141,10 +141,16 @@ def permutations(seq):
     if len(seq) == 0:
         yield []
     else:
+        seq = list(seq)
         for i in range(len(seq)):
-            for p in permutations(seq[:i] + seq[i+1:]):
-                yield [seq[i]] + p
-
+            # Take out current element
+            current = seq.pop(i)
+            # Generate all permutations of remaining elements
+            for rest in permutations(seq):
+                # Add current element to front of each permutation
+                yield [current] + rest
+            # Put current element back for next iteration
+            seq.insert(i, current)
 
 def make_joint(withdraw, old_pass, new_pass):
     """Return a password-protected withdraw function that has joint access to
