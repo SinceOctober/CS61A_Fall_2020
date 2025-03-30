@@ -103,7 +103,17 @@ def repeated(t, k):
     2
     """
     assert k > 1
-    "*** YOUR CODE HERE ***"
+    count = 1
+    prev = next(t)
+    
+    for value in t:
+        if value == prev:
+            count += 1
+            if count == k:
+                return value
+        else:
+            count = 1
+        prev = value
 
 
 def permutations(seq):
