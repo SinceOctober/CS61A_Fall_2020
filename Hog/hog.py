@@ -443,7 +443,6 @@ def final_strategy(score, opponent_score):
 # NOTE: Functions in this section do not need to be changed. They use features
 # of Python not yet covered in the course.
 
-
 @main
 def run(*args):
     """Read in the command-line argument and calls corresponding functions."""
