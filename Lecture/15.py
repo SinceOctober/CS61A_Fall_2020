@@ -1,3 +1,22 @@
+# A function can change the value of any object in its scope
+
+def mystery(s):
+    s.pop()
+    s.pop()
+
+def mystery2(s):
+    s[2:] = []
+
+four = [1, 2, 3, 4]
+len(four)
+# 4
+mystery(four)
+# 2
+
+def another_mystery():
+    four.pop()
+    four.pop()
+
 def date_demos():
     from datetime import date
     today = date(2020, 2, 24)
