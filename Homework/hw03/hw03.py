@@ -311,14 +311,20 @@ def quadratic(x, a, b, c):
     '0 to 10'
     """
     "*** YOUR CODE HERE ***"
-    extremum = -b / (2*a)
-    f = lambda x: a * x * x + b * x + c
-    l, u, e = map(f, (lower_bound(x), upper_bound(x), extremum))
+    extremum = -b / (2*a)  # x-coordinate of vertex
+    f = lambda x: a * x * x + b * x + c  # quadratic function
+    
+    # Calculate values at endpoints and extremum
+    l = f(lower_bound(x))
+    u = f(upper_bound(x))
+    e = f(extremum)
+    
+    # If extremum is within the interval, consider it for min/max
     if extremum >= lower_bound(x) and extremum <= upper_bound(x):
         return interval(min(l, u, e), max(l, u, e))
     else:
         return interval(min(l, u), max(l, u))
-
+    
 
 def par1(r1, r2):
     return div_interval(mul_interval(r1, r2), add_interval(r1, r2))
