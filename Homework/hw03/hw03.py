@@ -256,6 +256,7 @@ def lower_bound(x):
 def upper_bound(x):
     """Return the upper bound of interval x."""
     "*** YOUR CODE HERE ***"
+
 def str_interval(x):
     """Return a string representation of interval x.
     """
