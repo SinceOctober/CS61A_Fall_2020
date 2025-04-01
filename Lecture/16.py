@@ -1,5 +1,6 @@
 def make_withdraw(balance):
     """Return a withdraw function with a starting balance."""
+    
     def withdraw(amount):
         nonlocal balance
         if amount > balance:
