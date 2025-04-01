@@ -17,7 +17,6 @@ def make_withdraw_list(balance):
         return b[0]
     return withdraw
 
-
 def f(x):
     x = 4
     def g(y):
