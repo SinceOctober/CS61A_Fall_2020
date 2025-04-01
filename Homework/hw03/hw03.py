@@ -267,6 +267,7 @@ def add_interval(x, y):
     lower = lower_bound(x) + lower_bound(y)
     upper = upper_bound(x) + upper_bound(y)
     return interval(lower, upper)
+
 def mul_interval(x, y):
     """Return the interval that contains the product of any value in x and any
     value in y."""
