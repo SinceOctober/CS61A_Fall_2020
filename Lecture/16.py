@@ -40,3 +40,20 @@ def f(x):
 a = f(1)
 b = a(2)
 b(3) + b(4)
+
+def profit(t):
+    """Return the max profit
+    
+    >>> t = tree(2, [tree(3), tree(4)])
+    >>> profit(t)
+    4
+    """
+    return helper(t, False)
+
+def helper(t, used_parent):
+    if used_parent:
+        return sum(map(lambda x: helper(x, False), branches(t)))
+    else:
+        used_label_total = label0 + sum([helper(x, True) for x in branches(t)])
+        skip_label_total = sum([helper(x, False) for x in branches(t)])
+        return max(used_label_total, skip_label_total)
