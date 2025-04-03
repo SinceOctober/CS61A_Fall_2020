@@ -144,3 +144,23 @@ class Countdown:
         while v > 0:
             yield v
             v -= 1
+
+def a_then_b_for(a, b):
+    """The elements of a followed by those of b.
+
+    >>> list(a_then_b_for([3, 4], [5, 6]))
+    [3, 4, 5, 6]
+    """
+    for x in a:
+        yield x
+    for x in b:
+        yield x
+
+def a_then_b(a, b):
+    """The elements of a followed by those of b.
+
+    >>> list(a_then_b([3, 4], [5, 6]))
+    [3, 4, 5, 6]
+    """
+    yield from a
+    yield from b
