@@ -111,3 +111,16 @@ def plus_minus(x):
     """
     yield x
     yield -x
+
+def evens(start, end):
+    """A generator function that returns even numbers.
+
+    >>> list(evens(2, 10))
+    [2, 4, 6, 8]
+    >>> list(evens(1, 10))
+    [2, 4, 6, 8]
+    """
+    even = start + (start % 2)
+    while even < end:
+        yield even
+        even += 2
