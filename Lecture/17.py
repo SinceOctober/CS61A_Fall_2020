@@ -164,3 +164,4 @@ def a_then_b(a, b):
     """
     yield from a
     yield from b
+
