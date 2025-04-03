@@ -95,3 +95,19 @@ def built_in_demo():
     >>> d = {'a': 1, 'b': 2, 'c': 3}
     >>> items = iter(zip(d.keys(), d.values())) # Call next(items)
     """
+
+def plus_minus(x):
+    """Yield x and -x.
+
+    >>> t = plus_minus(3)
+    >>> next(t)
+    3
+    >>> next(t)
+    -3
+    >>> list(plus_minus(5))
+    [5, -5]
+    >>> list(map(abs, plus_minus(7)))
+    [7, 7]
+    """
+    yield x
+    yield -x
