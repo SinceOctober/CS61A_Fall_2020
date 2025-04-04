@@ -63,7 +63,7 @@ ax.set_yticklabels(df["Task"])
 ax.invert_yaxis()
 ax.set_xlabel("Month")
 ax.set_xlim(1, 15)
-ax.set_title("Updated Project Timeline Gantt Chart")
+ax.set_title("Project Timeline Gantt Chart")
 
 # Legend
 legend_patches = [mpatches.Patch(color=color, label=label) for label, color in colors.items()]
