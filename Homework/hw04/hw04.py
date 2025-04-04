@@ -191,6 +191,18 @@ def make_joint(withdraw, old_pass, new_pass):
     "Frozen account. Attempts: ['my', 'secret', 'password']"
     """
     "*** YOUR CODE HERE ***"
+    # Verify the old password works
+    result = withdraw(0, old_pass)
+    if type(result) == str:
+        return result
+
+    def joint_withdraw(amount, attempt):
+        if attempt == new_pass:
+            return withdraw(amount, old_pass)
+        else:
+            return withdraw(amount, attempt)
+            
+    return joint_withdraw
 
 
 def remainders_generator(m):
