@@ -259,4 +259,3 @@ def naturals():
     while True:
         yield i
         i += 1
-
