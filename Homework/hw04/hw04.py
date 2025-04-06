@@ -240,8 +240,7 @@ def remainders_generator(m):
     def remainder_gen(remainder):
         for n in naturals():
             if n % m == remainder:
-                yield n
-                
+                yield n          
     for i in range(m):
         yield remainder_gen(i)
 
