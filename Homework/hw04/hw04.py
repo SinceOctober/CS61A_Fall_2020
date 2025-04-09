@@ -204,7 +204,6 @@ def make_joint(withdraw, old_pass, new_pass):
             
     return joint_withdraw
 
-
 def remainders_generator(m):
     """
     Yields m generators. The ith yielded generator yields natural numbers whose
