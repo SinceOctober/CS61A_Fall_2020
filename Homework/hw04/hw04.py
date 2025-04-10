@@ -201,7 +201,6 @@ def make_joint(withdraw, old_pass, new_pass):
             return withdraw(amount, old_pass)
         else:
             return withdraw(amount, attempt)
-            
     return joint_withdraw
 
 def remainders_generator(m):
