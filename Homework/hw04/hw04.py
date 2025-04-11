@@ -190,7 +190,6 @@ def make_joint(withdraw, old_pass, new_pass):
     >>> make_joint(w, 'hax0r', 'hello')
     "Frozen account. Attempts: ['my', 'secret', 'password']"
     """
-    "*** YOUR CODE HERE ***"
     # Verify the old password works
     result = withdraw(0, old_pass)
     if type(result) == str:
