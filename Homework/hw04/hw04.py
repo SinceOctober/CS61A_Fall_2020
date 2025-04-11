@@ -194,7 +194,6 @@ def make_joint(withdraw, old_pass, new_pass):
     result = withdraw(0, old_pass)
     if type(result) == str:
         return result
-
     def joint_withdraw(amount, attempt):
         if attempt == new_pass:
             return withdraw(amount, old_pass)
