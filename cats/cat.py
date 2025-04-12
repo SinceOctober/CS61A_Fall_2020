@@ -16,7 +16,10 @@ def choose(paragraphs, select, k):
     the empty string.
     """
     # BEGIN PROBLEM 1
-    
+    selected = [p for p in paragraphs if select(p)]
+    if k >= len(selected):
+        return ''
+    return selected[k]
     # END PROBLEM 1
 
 
