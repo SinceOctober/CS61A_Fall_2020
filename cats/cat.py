@@ -22,7 +22,6 @@ def choose(paragraphs, select, k):
     return selected[k]
     # END PROBLEM 1
 
-
 def about(topic):
     """Return a select function that returns whether a paragraph contains one
     of the words in TOPIC.
