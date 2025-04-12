@@ -16,7 +16,7 @@ def choose(paragraphs, select, k):
     the empty string.
     """
     # BEGIN PROBLEM 1
-    "*** YOUR CODE HERE ***"
+    
     # END PROBLEM 1
 
 
