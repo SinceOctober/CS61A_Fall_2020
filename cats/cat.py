@@ -66,7 +66,8 @@ def accuracy(typed, reference):
     # BEGIN PROBLEM 3
     if not typed_words:  # If nothing was typed
         return 0.0
-        
+    
+    
     correct = 0
     for i in range(min(len(typed_words), len(reference_words))):
         if typed_words[i] == reference_words[i]:
