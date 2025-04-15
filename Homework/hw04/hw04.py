@@ -239,7 +239,6 @@ def remainders_generator(m):
     for i in range(m):
         yield remainder_gen(i)
 
-
 def naturals():
     """A generator function that yields the infinite sequence of natural
     numbers, starting at 1.
