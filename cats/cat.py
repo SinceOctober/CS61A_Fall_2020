@@ -82,6 +82,7 @@ def wpm(typed, elapsed):
     # BEGIN PROBLEM 4
     chars = len(typed)
     minutes = elapsed / 60
+    return (chars / 5) / minutes  # 5 characters per word
     # END PROBLEM 4
 
 
