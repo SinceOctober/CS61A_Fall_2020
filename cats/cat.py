@@ -71,7 +71,6 @@ def accuracy(typed, reference):
     for i in range(min(len(typed_words), len(reference_words))):
         if typed_words[i] == reference_words[i]:
             correct += 1
-            
     return (correct / len(typed_words)) * 100.0
     # END PROBLEM 3
 
