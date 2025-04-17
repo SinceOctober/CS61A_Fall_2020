@@ -91,7 +91,19 @@ def autocorrect(user_word, valid_words, diff_function, limit):
     than LIMIT.
     """
     # BEGIN PROBLEM 5
-    "*** YOUR CODE HERE ***"
+    if user_word in valid_words:
+        return user_word
+        
+    differences = []
+    for word in valid_words:
+        diff = diff_function(user_word, word, limit)
+        differences.append((diff, word))
+    
+    min_diff = min(differences, key=lambda x: x[0])
+    
+    if min_diff[0] > limit:
+        return user_word
+    return min_diff[1]
     # END PROBLEM 5
 
 
