@@ -113,7 +113,18 @@ def shifty_shifts(start, goal, limit):
     their lengths.
     """
     # BEGIN PROBLEM 6
-    assert False, 'Remove this line'
+    if limit < 0:  # Exceeded limit
+        return 0
+        
+    if not start or not goal:  # One string is empty
+        return len(start) + len(goal)
+        
+    if start[0] == goal[0]:  # First characters match
+        return shifty_shifts(start[1:], goal[1:], limit)
+    else:
+        # Count this substitution and recursively check rest
+        return 1 + shifty_shifts(start[1:], goal[1:], limit - 1)
+    # END PROBLEM 6
     # END PROBLEM 6
 
 
