@@ -125,7 +125,6 @@ def shifty_shifts(start, goal, limit):
         # Count this substitution and recursively check rest
         return 1 + shifty_shifts(start[1:], goal[1:], limit - 1)
     # END PROBLEM 6
-    # END PROBLEM 6
 
 
 def pawssible_patches(start, goal, limit):
