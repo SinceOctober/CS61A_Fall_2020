@@ -9,7 +9,6 @@ from datetime import datetime
 # Phase 1 #
 ###########
 
-
 def choose(paragraphs, select, k):
     """Return the Kth paragraph from PARAGRAPHS for which SELECT called on the
     paragraph returns true. If there are fewer than K such paragraphs, return
