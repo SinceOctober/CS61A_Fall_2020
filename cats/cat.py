@@ -145,8 +145,6 @@ def pawssible_patches(start, goal, limit):
     # END PROBLEM 7
 
 
-
-
 def final_diff(start, goal, limit):
     """A diff function. If you implement this function, it will be used."""
     assert False, 'Remove this line to use your final_diff function'
