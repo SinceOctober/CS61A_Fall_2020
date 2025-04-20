@@ -148,23 +148,7 @@ def pawssible_patches(start, goal, limit):
         "*** YOUR CODE HERE ***"
         # END
 
-def pawssible_patches(start, goal, limit):
-    """A diff function that computes the edit distance from START to GOAL."""
-    # BEGIN PROBLEM 7
-    if limit < 0:
-        return float('inf')  # Exceeded limit, so don't consider this path
-    if start == goal:
-        return 0
-    if not start or not goal:
-        return len(start) + len(goal)
-    if start[0] == goal[0]:
-        return pawssible_patches(start[1:], goal[1:], limit)
-    else:
-        add = 1 + pawssible_patches(start, goal[1:], limit - 1)
-        remove = 1 + pawssible_patches(start[1:], goal, limit - 1)
-        substitute = 1 + pawssible_patches(start[1:], goal[1:], limit - 1)
-        return min(add, remove, substitute)
-    # END PROBLEM 7
+
 
 
 def final_diff(start, goal, limit):
