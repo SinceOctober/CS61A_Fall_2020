@@ -169,7 +169,6 @@ def report_progress(typed, prompt, user_id, send):
     return progress
     # END PROBLEM 8
 
-
 def fastest_words_report(times_per_player, words):
     """Return a text description of the fastest words typed by each player."""
     game = time_per_word(times_per_player, words)
