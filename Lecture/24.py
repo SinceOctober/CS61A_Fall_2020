@@ -75,7 +75,6 @@ def digit_dict(s):
     last_digits = list(map(lambda x: x % 10, s))
     return {i: [x for x in s if x % 10 == i] for i in range(10) if i in last_digits}
 
-    return {i: [x for x in s if x % 10 == i] for i in range(10) if any([x % 10 == i for x in s])}
 def all_have_an_equal(s):
     """Does every element equal some other element in s?
 
