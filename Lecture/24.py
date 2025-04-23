@@ -66,7 +66,7 @@ def largest_adj_sum(s):
 
 def digit_dict(s):
     """Map each digit d to the lists of elements in s that end with d.
-
+ 
     >>> digit_dict([5, 8, 13, 21, 34, 55, 89])
     {1: [21], 3: [13], 4: [34], 5: [5, 55], 8: [8], 9: [89]}
     """
