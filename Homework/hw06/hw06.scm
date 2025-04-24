@@ -15,11 +15,6 @@
         ((< num 0) 1))
 )
 
-(define (sign num)
-  'YOUR-CODE-HERE
-)
-
-
 (define (square x) (* x x))
 
 (define (pow x y)
