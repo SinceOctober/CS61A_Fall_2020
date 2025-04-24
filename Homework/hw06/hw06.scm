@@ -20,26 +20,3 @@
 (define (pow x y)
   'YOUR-CODE-HERE
 )
-
-(define (cadr s)
-  (car (cdr s))
-)
-
-(define (caddr s)
-  (car (cdr (cdr s)))
-)
-
-
-(define (sign num)
-  (cond ((> num 0) 1)
-        ((< num 0) -1)
-        (else 0))
-)
-
-
-(define (pow x y)
-  (if (= y 0)
-      1
-      (* x (pow x (- y 1))))
-)
-
