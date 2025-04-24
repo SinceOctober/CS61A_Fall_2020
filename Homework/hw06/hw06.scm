@@ -9,6 +9,7 @@
   (car (cdr (cdr s)))
 )
 
+(define
 
 (define (sign num)
   'YOUR-CODE-HERE
