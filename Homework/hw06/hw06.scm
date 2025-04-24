@@ -9,7 +9,11 @@
   (car (cdr (cdr s)))
 )
 
-(define
+(define (sign num)
+  (cond ((> num 0) -1)
+        ((= num 0) 0)
+        ((< num 0) 1))
+)
 
 (define (sign num)
   'YOUR-CODE-HERE
