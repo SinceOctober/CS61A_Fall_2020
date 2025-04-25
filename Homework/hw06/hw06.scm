@@ -15,6 +15,11 @@
         ((< num 0) 1))
 )
 
+(define (abs num)
+  (cond ((> num 0) num)
+        ((= num 0) 0)
+        ((< num 0) (- num)))
+)
 (define (square x) (* x x))
 
 (define (pow x y)
