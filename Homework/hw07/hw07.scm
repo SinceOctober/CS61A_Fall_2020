@@ -13,7 +13,10 @@
 
 
 (define (interleave first second)
-  'YOUR-CODE-HERE
+  (cond ((null? first) second)
+        ((null? second) first)
+        (else (cons (car first) (cons (car second) (interleave (cdr first) (cdr second)))))
+  )
 )
 
 (interleave (list 1 3 5) (list 2 4 6))
