@@ -1,5 +1,8 @@
 (define (filter-lst fn lst)
-  'YOUR-CODE-HERE
+  (cond ((null? lst) nil)
+        ((fn (car lst)) (cons (car lst) (filter-lst fn (cdr lst))))
+        (else (filter-lst fn (cdr lst))) 
+  )
 )
 
 
