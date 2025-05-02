@@ -11,7 +11,6 @@
 (filter-lst even? '(0 1 1 2 3 5 8))
 ; expect (0 2 8)
 
-
 (define (interleave first second)
   (cond ((null? first) second)
         ((null? second) first)
