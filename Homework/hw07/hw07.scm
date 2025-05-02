@@ -35,9 +35,11 @@
   )
 )
 
-
 (define (no-repeats lst)
-  'YOUR-CODE-HERE
+  (define (helper seen rest)
+    (cond ((null? rest) nil)
+          ((member (car rest) seen) (helper seen (cdr rest)))
+          (else (cons (car rest) (helper (cons (car rest) seen) (cdr rest))))))
+  (helper nil lst)
 )
-
 
