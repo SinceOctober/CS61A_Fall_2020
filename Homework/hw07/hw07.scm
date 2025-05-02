@@ -29,7 +29,10 @@
 
 
 (define (accumulate combiner start n term)
-  'YOUR-CODE-HERE
+  (if (= n 0)
+      start
+      (accumulate combiner (combiner start (term n)) (- n 1) term))
+  )
 )
 
 
