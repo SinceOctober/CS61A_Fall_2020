@@ -57,6 +57,7 @@ CREATE TABLE cities AS
   SELECT 26,              80,              "Miami"            UNION
   SELECT 90,               0,              "North Pole";
 
+
 CREATE TABLE cold AS
   SELECT name FROM cities WHERE latitude > 43 UNION
   SELECT "Chicago";
