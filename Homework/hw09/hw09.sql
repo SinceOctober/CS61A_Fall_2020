@@ -39,7 +39,6 @@ CREATE TABLE by_parent_height AS
          JOIN dogs ON parents.parent = dogs.name
    ORDER BY dogs.height DESC;
 
-
 -- Filling out this helper table is optional
 CREATE TABLE siblings AS
   SELECT "REPLACE THIS LINE WITH YOUR SOLUTION";
