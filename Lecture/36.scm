@@ -48,7 +48,6 @@
 (for x '(2 3 4 5) (* x x))
 
 ; Quasi-quoting
-
 (define b 2)
 '(a b c)
 `(a b c)
