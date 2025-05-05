@@ -24,8 +24,8 @@
 
 (define-macro (twice expr) (list 'begin expr expr))
 
-(define-macro (check expr) 
-  (list 'if expr 'Passed 'Failed))
+(define-macro (for sym vals exprs)
+  `(map (lambda (,sym) ,@exprs) ,vals))
 
 (define x -2)
 (define (check val) (if val 'Passed 'Failed))
