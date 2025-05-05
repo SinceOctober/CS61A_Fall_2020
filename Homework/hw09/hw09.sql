@@ -32,6 +32,7 @@ CREATE TABLE size_of_dogs AS
    WHERE dogs.height > sizes.min AND dogs.height <= sizes.max;
 
 -- All dogs with parents ordered by decreasing height of their parent
+
 CREATE TABLE by_parent_height AS
   SELECT "REPLACE THIS LINE WITH YOUR SOLUTION";
 
