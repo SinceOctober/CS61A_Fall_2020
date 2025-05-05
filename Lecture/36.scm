@@ -50,7 +50,6 @@
 # (4 9 16 25)
 
 ; Quasi-quoting
-
 (define b 2)
 '(a b c)
 `(a b c)
