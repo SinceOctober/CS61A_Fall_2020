@@ -47,6 +47,7 @@
   (list 'map (list 'lambda (list sym) expr) vals))
 
 (for x '(2 3 4 5) (* x x))
+# (4 9 16 25)
 
 ; Quasi-quoting
 
