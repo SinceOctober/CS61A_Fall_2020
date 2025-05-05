@@ -24,6 +24,9 @@
 
 (define-macro (twice expr) (list 'begin expr expr))
 
+(define-macro (check expr) 
+  (list 'if expr 'Passed 'Failed))
+
 (define x -2)
 (define (check val) (if val 'Passed 'Failed))
 (check (> x 0))
