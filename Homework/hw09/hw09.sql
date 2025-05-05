@@ -40,6 +40,7 @@ CREATE TABLE by_parent_height AS
    ORDER BY dogs.height DESC;
 
 -- Filling out this helper table is optional
+
 CREATE TABLE siblings AS
   SELECT
     CASE WHEN c1.child < c2.child THEN c1.child ELSE c2.child END AS sib1,
@@ -50,6 +51,7 @@ CREATE TABLE siblings AS
     ON c1.parent = c2.parent AND c1.child < c2.child;
 
 -- Sentences about siblings that are the same size
+
 CREATE TABLE sentences AS
   SELECT
     "The two siblings, " || siblings.sib1 || " plus " || siblings.sib2 ||
