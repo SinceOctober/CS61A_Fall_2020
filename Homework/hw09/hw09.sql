@@ -41,9 +41,21 @@ CREATE TABLE by_parent_height AS
 
 -- Filling out this helper table is optional
 CREATE TABLE siblings AS
-  SELECT "REPLACE THIS LINE WITH YOUR SOLUTION";
+  SELECT
+    CASE WHEN c1.child < c2.child THEN c1.child ELSE c2.child END AS sib1,
+    CASE WHEN c1.child < c2.child THEN c2.child ELSE c1.child END AS sib2,
+    c1.parent
+  FROM parents AS c1
+  JOIN parents AS c2
+    ON c1.parent = c2.parent AND c1.child < c2.child;
 
 -- Sentences about siblings that are the same size
 CREATE TABLE sentences AS
-  SELECT "REPLACE THIS LINE WITH YOUR SOLUTION";
+  SELECT
+    "The two siblings, " || siblings.sib1 || " plus " || siblings.sib2 ||
+    " have the same size: " || size_of_dogs.size AS sentence
+  FROM siblings
+  JOIN size_of_dogs AS s1 ON siblings.sib1 = s1.name
+  JOIN size_of_dogs AS s2 ON siblings.sib2 = s2.name
+  WHERE s1.size = s2.size;
 
