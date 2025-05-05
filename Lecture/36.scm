@@ -41,6 +41,7 @@
             (map fn (cdr vals)))))
 
 (map (lambda (x) (* x x)) '(2 3 4 5))
+# (4 9 16 25)
 
 (define-macro (for sym vals expr)
   (list 'map (list 'lambda (list sym) expr) vals))
