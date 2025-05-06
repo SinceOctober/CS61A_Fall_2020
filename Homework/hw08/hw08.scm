@@ -52,6 +52,11 @@
   'YOUR-CODE-HERE
 )
 
+(define (derive-sum expr var)
+  (make-sum (derive (first-operand expr) var)
+            (derive (second-operand expr) var))
+)
+
 ; Exponentiations are represented as lists that start with ^.
 (define (make-exp base exponent)
   'YOUR-CODE-HERE
