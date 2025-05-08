@@ -47,7 +47,6 @@ def bigs_nonlocal(t):
     f(t, t.label - 1)
     return n
 
-
 def smalls(t):
     """Return the non-leaf nodes in t that are smaller than all their descendants.
 
