@@ -67,3 +67,4 @@ def smalls(t):
             return min(smallest, t.label)
     process(t)
     return result
+
