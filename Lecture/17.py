@@ -194,3 +194,4 @@ def substrings(s):
     if s:
         yield from prefixes(s)
         yield from substrings(s[1:])
+
