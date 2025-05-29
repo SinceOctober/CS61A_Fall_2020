@@ -8,6 +8,7 @@ def make_withdraw(balance):
         return balance
     return withdraw
 
+
 # Also works:
 def make_withdraw1(balance):
     """Return a withdraw function with a starting balance."""
