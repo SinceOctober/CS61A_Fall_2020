@@ -19,7 +19,6 @@ def make_withdraw1(balance):
         return balance
     return withdraw
 
-
 def make_withdraw_list(balance):
     b = [balance]
     def withdraw(amount):
